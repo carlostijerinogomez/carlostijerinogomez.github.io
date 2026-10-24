@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carlos Tijerino | Data Science, AI & Applied Mathematics</title>
+<meta name="description" content="Portafolio de Carlos Tijerino, estudiante de Ingeniería en Computación en la UNAM FES Aragón.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { 'batman-yellow': '#FFE600', 'batman-dark': '#000000', gotham: '#09090b' },
+    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }
+  } }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #000; color: #F4F4F5; }
+  .glass { background: rgba(24,24,27,.55); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.08); transition: border-color .25s, box-shadow .25s, transform .25s; }
+  .glass:hover { border-color: #FFE600; box-shadow: 0 0 24px rgba(255,230,0,.12); transform: translateY(-3px); }
+  .glow { text-shadow: 0 0 28px rgba(255,230,0,.35); }
+  .sky { background: radial-gradient(ellipse at 50% -10%, rgba(255,230,0,.16), transparent 55%), #000; }
+  .tag { font-family: 'JetBrains Mono', monospace; font-size: .72rem; }
+  .pixel { image-rendering: pixelated; }
+  :focus-visible { outline: 2px solid #FFE600; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body class="font-sans antialiased">
+
+<!-- NAVBAR -->
+<header class="fixed top-0 inset-x-0 z-50 bg-black/60 backdrop-blur-md border-b border-white/10">
+  <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between" aria-label="Principal">
+    <a href="#top" class="font-extrabold text-lg"> Carlos Tijerino</a>
+    <ul class="hidden md:flex items-center gap-7 text-sm text-zinc-400">
+      <li><a class="hover:text-batman-yellow transition" href="#about">About</a></li>
+      <li><a class="hover:text-batman-yellow transition" href="#stack">Stack</a></li>
+      <li><a class="hover:text-batman-yellow transition" href="#projects">Projects</a></li>
+      <li><a class="hover:text-batman-yellow transition" href="#experience">Experience</a></li>
+      <li><a class="hover:text-batman-yellow transition" href="#contact">Contact</a></li>
+    </ul>
+    <div class="flex items-center gap-3">
+      <a href="CV_Carlos_Tijerino.pdf" target="_blank" id="cv" class="hidden sm:inline-block bg-batman-yellow text-black text-sm font-semibold px-4 py-2 rounded-md hover:brightness-110 transition">Resume / CV</a>
+      <button id="menuBtn" class="md:hidden p-2 text-batman-yellow" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-white/10 bg-black/90 px-5 py-4 space-y-3 text-zinc-300">
+    <a class="block" href="#about">About</a><a class="block" href="#stack">Stack</a>
+    <a class="block" href="#projects">Projects</a><a class="block" href="#experience">Experience</a>
+    <a class="block" href="#contact">Contact</a>
+    <a href="CV_Carlos_Tijerino.pdf" target="_blank" class="cv-m block text-batman-yellow font-semibold">Resume / CV</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="sky min-h-screen flex items-center pt-24 pb-16">
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-[1.4fr_1fr] gap-10 items-center">
+    <div>
+      <p class="tag text-batman-yellow mb-4">Hola, soy</p>
+      <h1 class="text-5xl sm:text-7xl font-extrabold leading-[1.02] glow">Carlos<br>Tijerino</h1>
+      <p class="mt-5 text-lg text-zinc-400 max-w-xl">Computer Engineering Student @ UNAM FES Aragón. Data Science, AI &amp; Applied Mathematics, Ciudad de México.</p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        <span class="tag border border-batman-yellow/50 text-batman-yellow px-3 py-1 rounded-full">UNAM FES ARAGÓN | GPA 9.1</span>
+        <span class="tag border border-white/20 text-zinc-200 px-3 py-1 rounded-full">DATA SCIENCE &amp; AI</span>
+        <span class="tag border border-white/20 text-zinc-200 px-3 py-1 rounded-full">MATH TUTOR</span>
+      </div>
+      <blockquote class="mt-7 border-l-2 border-batman-yellow pl-4 italic text-zinc-300 max-w-xl">"Uniendo mi gusto por las matemáticas con la ingeniería para construir algoritmos, analizar datos y resolver problemas complejos."</blockquote>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#projects" class="bg-batman-yellow text-black font-semibold px-6 py-3 rounded-md hover:brightness-110 transition">Explore Projects</a>
+        <a href="https://github.com/carlostijerinogomez" target="_blank" rel="noopener" class="border border-white/25 px-6 py-3 rounded-md hover:border-batman-yellow hover:text-batman-yellow transition">GitHub Profile</a>
+      </div>
+    </div>
+    <div class="flex justify-center items-center">
+  <img class="pixel max-w-[330px] sm:max-w-[390px] w-full h-auto" 
+       alt="Link en pixel art" 
+       src="https://66.media.tumblr.com/68c46791d6af2808ff5422b58793cb62/tumblr_mt75h32adl1rfjowdo1_500.gif">
+</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 bg-gotham">
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-10">
+    <div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold">Sobre mí</h2>
+      <p class="mt-5 text-zinc-400 leading-relaxed max-w-prose">Estudio Ingeniería en Computación en la UNAM FES Aragón. Mi enfoque está en la ciencia de datos, el aprendizaje automático y la arquitectura de datos: me interesa entender cómo se mueve, se almacena y se convierte en decisiones la información.</p>
+      <p class="mt-4 text-zinc-400 leading-relaxed max-w-prose">Trabajo activamente como tutor privado de matemáticas universitarias, lo que refuerza mi base en álgebra lineal, cálculo y estadística, y me obliga a explicar bien lo que sé.</p>
+      <p class="mt-6 tag text-zinc-500">Idiomas: Inglés C1 · Francés (lectura) · Italiano básico</p>
+    </div>
+    <div class="grid gap-4">
+      <div class="glass rounded-xl p-5"><h3 class="font-semibold text-batman-yellow">Ciencia de datos y ML</h3><p class="text-sm text-zinc-400 mt-1">Análisis, modelado y clasificación aplicados a problemas reales.</p></div>
+      <div class="glass rounded-xl p-5"><h3 class="font-semibold text-batman-yellow">Arquitectura de datos</h3><p class="text-sm text-zinc-400 mt-1">Bases de datos relacionales y distribuidas, y su diseño.</p></div>
+      <div class="glass rounded-xl p-5"><h3 class="font-semibold text-batman-yellow">Base matemática</h3><p class="text-sm text-zinc-400 mt-1">Álgebra lineal, cálculo y estadística, que enseño a nivel universitario.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section id="stack" class="py-24">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-3xl sm:text-4xl font-extrabold">Tech stack</h2>
+    <div class="mt-10 grid md:grid-cols-3 gap-5">
+      <div class="glass rounded-xl p-6">
+        <svg class="text-batman-yellow" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 19V9M10 19V4M16 19v-7M22 19H2"/></svg>
+        <h3 class="mt-3 font-semibold">Data Science &amp; Core</h3>
+        <div class="mt-4 flex flex-wrap gap-2 tag"><span class="chip">Python</span><span class="chip">MATLAB</span><span class="chip">C++</span><span class="chip">Java 17</span><span class="chip">C</span></div>
+      </div>
+      <div class="glass rounded-xl p-6">
+        <svg class="text-batman-yellow" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.300 8-3V6M4 12v6c0 1.700 3.600 3 8 3s8-1.300 8-3v-6"/></svg>
+        <h3 class="mt-3 font-semibold">Databases &amp; Architecture</h3>
+        <div class="mt-4 flex flex-wrap gap-2 tag"><span class="chip">SQL</span><span class="chip">MySQL</span><span class="chip">Apache Cassandra</span><span class="chip">HTML5/CSS3</span></div>
+      </div>
+      <div class="glass rounded-xl p-6">
+        <svg class="text-batman-yellow" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14.700 6.300a4 4 0 0 0-5.400 5.400L3 18l3 3 6.300-6.300a4 4 0 0 0 5.400-5.400l-2.500 2.500-2.500-.5-.5-2.500z"/></svg>
+        <h3 class="mt-3 font-semibold">Containers &amp; Tools</h3>
+        <div class="mt-4 flex flex-wrap gap-2 tag"><span class="chip">Docker</span><span class="chip">Linux</span><span class="chip">Git</span><span class="chip">Arduino</span><span class="chip">Fusion 360</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>.chip{border:1px solid rgba(255,255,255,.15);padding:.25rem .65rem;border-radius:.4rem;color:#F4F4F5;transition:.2s}.chip:hover{border-color:#FFE600;color:#FFE600}</style>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-24 bg-gotham">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-3xl sm:text-4xl font-extrabold">Featured projects</h2>
+    <div class="mt-10 grid md:grid-cols-2 gap-5">
+      <article class="glass rounded-xl p-6 flex flex-col">
+        <h3 class="text-xl font-semibold">Sorting Algorithms Benchmark</h3>
+        <p class="mt-2 text-sm text-zinc-400 flex-1">Comparativa empírica de complejidad O(n²) vs O(n log n), con visualización del tiempo de ejecución en Python y C++.</p>
+        <div class="mt-4 flex flex-wrap gap-2 tag text-batman-yellow"><span>#Python</span><span>#C++</span><span>#Algorithms</span></div>
+        <a class="btn" href="https://github.com/carlostijerinogomez" target="_blank" rel="noopener">View Code</a>
+      </article>
+      <article class="glass rounded-xl p-6 flex flex-col">
+        <h3 class="text-xl font-semibold">RGB Fruit Classifier</h3>
+        <p class="mt-2 text-sm text-zinc-400 flex-1">Clasificación de color en tiempo real con Arduino y sensor RGB, usando normalización vectorial del espacio de color.</p>
+        <div class="mt-4 flex flex-wrap gap-2 tag text-batman-yellow"><span>#Arduino</span><span>#C++</span><span>#Sensors</span></div>
+        <a class="btn" href="https://github.com/carlostijerinogomez" target="_blank" rel="noopener">View Code</a>
+      </article>
+      <article class="glass rounded-xl p-6 flex flex-col">
+        <h3 class="text-xl font-semibold">Pumagotchi</h3>
+        <p class="mt-2 text-sm text-zinc-400 flex-1">Mascota virtual interactiva en JavaFX con motor de decisión y recolección de datos de comportamiento.</p>
+        <div class="mt-4 flex flex-wrap gap-2 tag text-batman-yellow"><span>#Java17</span><span>#JavaFX</span><span>#Data</span></div>
+        <a class="btn" href="https://github.com/carlostijerinogomez" target="_blank" rel="noopener">View Code</a>
+      </article>
+      <article class="glass rounded-xl p-6 flex flex-col">
+        <h3 class="text-xl font-semibold">Scale R2-D2 Robot</h3>
+        <p class="mt-2 text-sm text-zinc-400 flex-1">Sistema embebido de 20 cm en C++/Arduino, diseño 3D en Fusion 360 y control por telemetría Bluetooth.</p>
+        <div class="mt-4 flex flex-wrap gap-2 tag text-batman-yellow"><span>#C++</span><span>#Arduino</span><span>#Fusion360</span><span>#Bluetooth</span></div>
+        <a class="btn" href="https://github.com/carlostijerinogomez" target="_blank" rel="noopener">View Code</a>
+      </article>
+    </div>
+  </div>
+</section>
+<style>.btn{margin-top:1.25rem;align-self:flex-start;border:1px solid rgba(255,230,0,.6);color:#FFE600;padding:.45rem 1rem;border-radius:.4rem;font-size:.85rem;font-weight:600;transition:.2s}.btn:hover{background:#FFE600;color:#000}</style>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="py-24">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-3xl sm:text-4xl font-extrabold">Experience &amp; beyond the terminal</h2>
+    <div class="mt-10 grid md:grid-cols-2 gap-8">
+      <div class="space-y-5">
+        <div class="border-l-2 border-batman-yellow pl-5">
+          <h3 class="font-semibold">Cofundador & Liderazgo de Infraestructura TI</h3>
+          <p class="tag text-batman-yellow mt-1">Cano Tijerino · Arquitectura e Ingeniería</p>
+          <p class="text-sm text-zinc-400 mt-2">Cofundador a cargo de la estrategia tecnológica, evaluación de infraestructura y servicios cloud (IaaS/PaaS) y la gestión de soluciones digitales del estudio.</p>
+        </div>
+        <div class="border-l-2 border-batman-yellow pl-5">
+          <h3 class="font-semibold">Tutor privado de matemáticas</h3>
+          <p class="tag text-batman-yellow mt-1">Matemáticas universitarias avanzadas</p>
+          <p class="text-sm text-zinc-400 mt-2">Álgebra lineal, cálculo y estadística para estudiantes de nivel superior.</p>
+        </div>
+      </div>
+      <div class="glass rounded-xl p-6">
+        <h3 class="font-semibold text-batman-yellow">Hobbies</h3>
+        <p class="text-sm text-zinc-400 mt-3 leading-relaxed">En mi tiempo libre me gusta tocar disitnos instrumento. También me apasiona conectar el desarrollo de software y hardware con las cosas que me gustan del cine, la ciencia ficción y los videojuegos (como el desarrollo del robot R2-D2)</p>
+        <div class="mt-4 flex flex-wrap gap-2 tag">
+          <span class="chip">Batman</span><span class="chip">Zelda</span><span class="chip">Star Wars</span><span class="chip">Back to the Future</span><span class="chip">Harry Potter</span><span class="chip">LOTR</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER / CONTACT -->
+<footer id="contact" class="py-20 bg-gotham border-t border-white/10">
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-10">
+    <div>
+      <h2 class="text-3xl font-extrabold">Contacto</h2>
+      <p class="mt-3 text-zinc-400">¿Colaboramos o hablamos de datos, matemáticas o robots?</p>
+      <div class="mt-5 flex flex-wrap items-center gap-3">
+        <span class="tag text-zinc-200 border border-white/15 rounded-md px-3 py-2" id="mail">carlostijerinogomez@gmail.com</span>
+        <button id="copyBtn" class="btn !mt-0">Copiar email</button>
+      </div>
+      <div class="mt-6 flex gap-5 text-sm">
+        <a class="hover:text-batman-yellow transition" href="https://github.com/carlostijerinogomez" target="_blank" rel="noopener">GitHub</a>
+        <a class="hover:text-batman-yellow transition" href="https://www.linkedin.com/in/carlos-tijerino-39b782442/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <form id="form" class="glass rounded-xl p-6 space-y-3 hover:!translate-y-0">
+      <label class="block text-sm text-zinc-400" for="n">Nombre</label>
+      <input id="n" required class="w-full bg-black border border-white/15 rounded-md px-3 py-2 focus:border-batman-yellow outline-none">
+      <label class="block text-sm text-zinc-400" for="m">Mensaje</label>
+      <textarea id="m" rows="3" required class="w-full bg-black border border-white/15 rounded-md px-3 py-2 focus:border-batman-yellow outline-none"></textarea>
+      <button class="bg-batman-yellow text-black font-semibold px-5 py-2 rounded-md hover:brightness-110 transition">Enviar mensaje</button>
+    </form>
+  </div>
+  <p class="mt-14 text-center italic text-zinc-500">Ingeniería, matemáticas y datos aplicados al mundo real.</p>
+  <p class="mt-2 text-center tag text-zinc-600">© 2026 Carlos Tijerino · Ciudad de México</p>
+</footer>
+
+<div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-batman-yellow text-black text-sm font-semibold px-4 py-2 rounded-md opacity-0 pointer-events-none transition-opacity" role="status"></div>
+
+<script>
+  const $ = (s) => document.querySelector(s);
+  const toast = (t) => { const e = $('#toast'); e.textContent = t; e.style.opacity = 1; setTimeout(() => e.style.opacity = 0, 2200); };
+  const email = 'carlostijerinogomez@gmail.com';
+
+  // Menú móvil
+  const btn = $('#menuBtn'), menu = $('#mobileMenu');
+  btn.addEventListener('click', () => { const open = menu.classList.toggle('hidden') === false; btn.setAttribute('aria-expanded', open); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.add('hidden'); btn.setAttribute('aria-expanded', false); }));
+
+  
+
+  // Copiar email
+  $('#copyBtn').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(email); toast('Email copiado'); }
+    catch { toast('No se pudo copiar: ' + email); }
+  });
+
+  // Formulario vía mailto
+  $('#form').addEventListener('submit', e => {
+    e.preventDefault();
+    const s = encodeURIComponent('Contacto desde portafolio: ' + $('#n').value);
+    window.location.href = `mailto:${email}?subject=${s}&body=${encodeURIComponent($('#m').value)}`;
+  });
+</script>
+</body>
+</html>
